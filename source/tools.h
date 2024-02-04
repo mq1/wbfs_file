@@ -5,11 +5,13 @@
 #ifndef _TOOLS_H
 #define _TOOLS_H
 
+#include <stdint.h>
+
 // basic data types
 typedef unsigned char u8;
-typedef unsigned short u16;
-typedef unsigned int u32;
-typedef unsigned long long u64;
+typedef uint16_t u16;
+typedef uint32_t u32;
+typedef uint64_t u64;
 
 u16 be16(const u8 *p);
 u32 be32(const u8 *p);

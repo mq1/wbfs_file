@@ -11,10 +11,11 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
 
 #define u8 unsigned char       /* 8 bits  */
-#define u32 unsigned long       /* 32 bits */
-#define u64 unsigned long long
+#define u32 uint32_t       /* 32 bits */
+#define u64 uint64_t
 
 /* rotates x one bit to the left */
 
