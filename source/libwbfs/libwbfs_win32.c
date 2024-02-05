@@ -4,13 +4,9 @@
 #include <winioctl.h>
 #include <setupapi.h>
 #include <io.h>
+#include <stdint.h>
 
 #define FSCTL_SET_ZERO_DATA             CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 50, METHOD_BUFFERED, FILE_WRITE_DATA)
-typedef struct _FILE_ZERO_DATA_INFORMATION {
-  LARGE_INTEGER FileOffset;
-  LARGE_INTEGER BeyondFinalZero;
-} FILE_ZERO_DATA_INFORMATION, *PFILE_ZERO_DATA_INFORMATION;
-
 
 #include <stdio.h>
 #include <sys/types.h>
@@ -21,7 +17,7 @@ typedef struct _FILE_ZERO_DATA_INFORMATION {
 
 #if defined(__CYGWIN__)
 #define _get_osfhandle get_osfhandle
-typedef long long off64_t;
+typedef int64_t off64_t;
 #endif
 
 #include "libwbfs.h"
