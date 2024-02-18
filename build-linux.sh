@@ -12,7 +12,7 @@ gcc \
     source/libwbfs/libwbfs_linux.c \
     -I source -I source/libwbfs \
     -DLARGE_FILES -D_FILE_OFFSET_BITS=64 \
-    -Oz \
+    -Os \
     -o wbfs_file-Linux-x86_64
 
 strip wbfs_file-Linux-x86_64

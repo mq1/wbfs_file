@@ -12,7 +12,7 @@ clang \
     source/libwbfs/libwbfs_osx.c \
     -I source -I source/libwbfs \
     -DLARGE_FILES -D_FILE_OFFSET_BITS=64 \
-    -Oz \
+    -Os \
     -arch x86_64 \
     -o wbfs_file-MacOS-x86_64
 strip wbfs_file-MacOS-x86_64
@@ -29,7 +29,7 @@ clang \
     source/libwbfs/libwbfs_osx.c \
     -I source -I source/libwbfs \
     -DLARGE_FILES -D_FILE_OFFSET_BITS=64 \
-    -Oz \
+    -Os \
     -arch arm64 \
     -o wbfs_file-MacOS-arm64
 strip wbfs_file-MacOS-arm64

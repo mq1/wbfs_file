@@ -10,5 +10,5 @@ gcc ^
     source\libwbfs\libwbfs_win32.c ^
     -I source -I source\libwbfs ^
     -DLARGE_FILES -D_FILE_OFFSET_BITS=64 ^
-    -Oz ^
+    -Os ^
     -o wbfs_file-Windows-x86_64.exe
